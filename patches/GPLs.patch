@@ -1,0 +1,13 @@
+--- agrsoftmodem.c.GPL	2009-12-24 10:37:33.000000000 -0500
++++ agrsoftmodem.c	2009-12-24 10:26:24.000000000 -0500
+@@ -207,8 +207,8 @@
+ module_exit(modem_cleanup_module);
+ MODULE_AUTHOR("Agere Systems Inc");
+ MODULE_DESCRIPTION("Agere Modem Controller driver");
+-MODULE_LICENSE("Proprietary");
+-//MODULE_LICENSE("GPL");
++//MODULE_LICENSE("Proprietary");
++MODULE_LICENSE("GPL");
+ 
+ /************************ Memory allocation ************************/
+ fnatr void *x_vmalloc (unsigned int size) { return vmalloc (size); }

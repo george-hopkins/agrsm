@@ -1,0 +1,52 @@
+Please note that this software is distributed under the Agere Systems Soft
+Modem End User SOFTWARE LICENSE AGREEMENT, which can be found in the file
+LICENSE, included in this package
+
+Please note that this version of the driver is intended to work Red Flag NE 5.0
+having Linux kernel version 2.6.21.0-22
+
+#################################################################
+INSTALLING THE AGERE SOFT MODEM DRIVER VERSION 2.1.80 
+from the sandard driver package ( zip / tar.gz archieve)
+
+Step 1
+Uninstall any older version of the Agere soft modem driver by running 
+"make uninstall" from the directory containing the previously installed 
+Agere softmodem driver.
+
+Step 2
+To install the Agere soft modem driver in LINUX, extract the driver package
+(unzip /tar -xzvf) in a directory under Linux. 
+
+To install the modem driver you must be logged in as root.
+
+If your kernel version matches the one stated above, run "make install" from 
+the command prompt. This will install both the Agere soft modem controller 
+driver agrmodem.ko and the Modem serial interface driver agrserial.ko. 
+
+If your kernel version doesn't matches the one stated above, channces are you 
+need to regenerate agrmodem.ko & agrserial.ko. Make sure that you have the 
+kernel source installed in your system and the kernel directory is linked to
+/usr/src/linux. Run "make module" and then "make install" from the command prompt.
+
+Step 3
+To use Agere soft modem using KPPP choose "/dev/ttyAGS3" or "/dev/modem" as the modem device.
+
+To use the Agere soft modem, you can configure "minicom" for the modem device.
+Enter "minicom -s" at the command prompt.
+Choose "Serial Port Setup"
+For "Serial Device" choose "/dev/ttyAGS3" or "/dev/modem"
+Save settings as default (dfl) and start using the modem with minicom.
+
+UNINSTALLING THE MODEM DRIVER
+
+Following are the steps to follow to uninstall the Agere soft modem driver for
+Linux.
+
+Step 1
+To uninstall the Agere soft modem driver in LINUX, you can run "make uninstall"
+from the command prompt. To uninstall the modem driver you must be logged in as
+root.
+
+
+

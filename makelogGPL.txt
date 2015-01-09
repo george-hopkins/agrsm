@@ -1,0 +1,21 @@
+DKMS make.log for agrsm-11c11040-20081208 for kernel 2.6.31-14-generic (i686)
+Wed Dec  9 00:38:44 EST 2009
+make: Entering directory `/usr/src/linux-headers-2.6.31-14-generic'
+  LD      /var/lib/dkms/agrsm-11c11040/20081208/build/built-in.o
+  CC [M]  /var/lib/dkms/agrsm-11c11040/20081208/build/agrsoftmodem.o
+/var/lib/dkms/agrsm-11c11040/20081208/build/agrsoftmodem.c: In function ‘x_linux_dbg_print_crit’:
+/var/lib/dkms/agrsm-11c11040/20081208/build/agrsoftmodem.c:358: warning: the frame size of 1540 bytes is larger than 1024 bytes
+/var/lib/dkms/agrsm-11c11040/20081208/build/agrsoftmodem.c: In function ‘x_linux_dbg_print’:
+/var/lib/dkms/agrsm-11c11040/20081208/build/agrsoftmodem.c:346: warning: the frame size of 1540 bytes is larger than 1024 bytes
+  SHIPPED /var/lib/dkms/agrsm-11c11040/20081208/build/agrmodemlib.o
+  CC [M]  /var/lib/dkms/agrsm-11c11040/20081208/build/HDA.o
+  CC [M]  /var/lib/dkms/agrsm-11c11040/20081208/build/serial26.o
+  LD [M]  /var/lib/dkms/agrsm-11c11040/20081208/build/agrmodem.o
+  LD [M]  /var/lib/dkms/agrsm-11c11040/20081208/build/agrserial.o
+  Building modules, stage 2.
+  MODPOST 2 modules
+WARNING: could not find /var/lib/dkms/agrsm-11c11040/20081208/build/.agrmodemlib.o.cmd for /var/lib/dkms/agrsm-11c11040/20081208/build/agrmodemlib.o
+FATAL: modpost: GPL-incompatible module agrmodem.ko uses GPL-only symbol 'snd_hda_codec_write'
+make[1]: *** [__modpost] Error 1
+make: *** [modules] Error 2
+make: Leaving directory `/usr/src/linux-headers-2.6.31-14-generic'

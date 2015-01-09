@@ -1,0 +1,29 @@
+
+Loading drivers:
+
+Drivers loaded:
+agrserial              12032  0 
+agrmodem             1250948  1 
+snd_hda_codec          75708  3 agrmodem,snd_hda_codec_realtek,snd_hda_intel
+snd                    59204  19 agrmodem,snd_hda_codec_realtek,snd_hda_intel,snd_hda_codec,snd_hwdep,snd_pcm_oss,snd_mixer_oss,snd_pcm,snd_seq_oss,snd_rawmidi,snd_seq,snd_timer,snd_seq_device
+
+and symbolic link created:
+lrwxrwxrwx 1 root root 12 2009-12-09 01:02 /dev/ttySAGR -> /dev/ttyAGS3
+
+Checking for utility wvdialconf
+Found /usr/bin/wvdialconf, preparing to run:
+	wvdialconf /etc/wvdial.conf
+
+Modem Port Scan<*1>: S0   S1   S2   S3   
+ttySAGR<*1>: ATQ0 V1 E1 -- failed with 2400 baud, next try: 9600 baud
+ttySAGR<*1>: ATQ0 V1 E1 -- failed with 9600 baud, next try: 115200 baud
+ttySAGR<*1>: ATQ0 V1 E1 -- and failed too at 115200, giving up.
+
+A reboot may be necessary before modem detection through:
+	sudo modprobe agrserial
+Which will load agrmodem, agrserial and create the symbolic link needed for:
+	sudo wvdialconf
+
+
+The installation record has been written to ./agrsm-test.txt
+
